@@ -73,4 +73,10 @@ func TestStringCalculator(t *testing.T) {
 		assert.Nil(t, err)
 		assert.Equal(t, 6,result)
 	})
+	t.Run("should return 6 when take `//[foo][bar]\\n1foo2bar3`", func(t *testing.T) {
+		result, err := Add("//[foo][bar]\\n1foo2bar3")
+
+		assert.Nil(t, err)
+		assert.Equal(t, 6,result)
+	})
 }
