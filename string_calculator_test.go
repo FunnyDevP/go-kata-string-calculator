@@ -67,4 +67,10 @@ func TestStringCalculator(t *testing.T) {
 		assert.Nil(t, err)
 		assert.Equal(t, 6,result)
 	})
+	t.Run("should return 6 when take `//[*][%]\\n1*2%3`", func(t *testing.T) {
+		result, err := Add("//[*][%]\\n1*2%3")
+
+		assert.Nil(t, err)
+		assert.Equal(t, 6,result)
+	})
 }
