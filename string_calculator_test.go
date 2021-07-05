@@ -55,4 +55,10 @@ func TestStringCalculator(t *testing.T) {
 		assert.NotNil(t, err)
 		assert.Equal(t, "error: negatives not allowed: -2 -3",err.Error())
 	})
+	t.Run("should return 2 when take `1001,2`", func(t *testing.T) {
+		result, err := Add("1001,2")
+
+		assert.Nil(t, err)
+		assert.Equal(t, 2,result)
+	})
 }

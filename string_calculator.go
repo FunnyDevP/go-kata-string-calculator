@@ -22,6 +22,8 @@ func Add(numbers string) (int,error) {
 
 		if n < 0 {
 			negativeVal = append(negativeVal,v)
+		} else if n > 1000 {
+			continue
 		}
 		result += n
 	}
