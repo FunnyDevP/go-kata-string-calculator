@@ -21,4 +21,7 @@ func TestStringCalculator(t *testing.T) {
 	t.Run("should return 55 when take `1,2,3,4,5,6,7,8,9,10`", func(t *testing.T) {
 		assert.Equal(t, 55,Add("1,2,3,4,5,6,7,8,9,10"))
 	})
+	t.Run("should return 6 when take `1\n2,3`", func(t *testing.T) {
+		assert.Equal(t, 6,Add("1\n2,3"))
+	})
 }

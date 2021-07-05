@@ -11,7 +11,7 @@ func Add(numbers string) int {
 	}
 
 	result := 0
-
+	numbers = strings.Replace(numbers,"\n",",",1)
 	for _, v := range strings.Split(numbers, ",") {
 		n, _ := strconv.Atoi(v)
 		result += n
